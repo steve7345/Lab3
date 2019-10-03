@@ -47,5 +47,18 @@ namespace Q2
             Console.WriteLine($"Current speed: {CurrentSpeed}");
             Console.WriteLine($"Engine Size: {EngineSize}");
         }
+        public override string ToString()
+        {
+            return string.Format($"Car make: {Make}" +
+                                 $"\nCar model: {Model}" +
+                                 $"\nCurrent speed: {currentSpeed}") +
+                                 $"\nEngine size: {EngineSize}";
+        }
+
+        public void Accelerate()
+        {
+            CurrentSpeed += 10;
+            Console.WriteLine($"The current speed is {CurrentSpeed}");
+        }
     }
 }
